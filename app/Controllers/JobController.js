@@ -1,5 +1,5 @@
 import { ProxyState } from "../AppState.js";
-import { jobService } from "../Services/JobService.js";
+import { jobsService } from "../Services/JobsService.js";
 
 function _drawJobs() {
 
@@ -30,16 +30,16 @@ export default class JobsController {
       description: form['description'].value
     }
 
-    jobService.createJob(newJob)
+    jobsService.createJob(newJob)
 
     // @ts-ignore
     form.reset()
     // @ts-ignore
-    document.getElementById()
+    document.getElementById('new-job-modal').modal('hide');
   }
 
 
   deleteJob(id) {
-    jobService.deleteJob(id)
+    jobsService.deleteJob(id)
   }
 }

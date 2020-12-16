@@ -10,9 +10,9 @@ class JobsService {
 
         let job = new Job(newJob)
 
-        ProxyState.job = [...ProxyState.jobs, job]
+        ProxyState.jobs = [...ProxyState.jobs, job]
     }
 
 }
 
-export const jobService = new JobService()
+export const jobsService = new JobsService()

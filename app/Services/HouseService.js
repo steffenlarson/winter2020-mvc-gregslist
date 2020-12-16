@@ -3,15 +3,15 @@ import House from "../Models/House.js";
 
 
 class HouseService {
-    deleteHouse(id) {
-        ProxyState.houses = ProxyState.houses.filter(house => house.id != house)
-    }
-    createHouse(newHouse) {
+  deleteHouse(id) {
+    ProxyState.houses = ProxyState.houses.filter(house => house.id != id)
+  }
+  createHouse(newHouse) {
 
-        let house = new House(newHouse)
+    let house = new House(newHouse)
 
-        ProxyState.house = [...ProxyState.house, house]
-    }
+    ProxyState.houses = [...ProxyState.houses, house]
+  }
 
 }
 
