@@ -2,7 +2,7 @@ import { ProxyState } from "../AppState.js";
 import House from "../Models/House.js";
 
 
-class HouseService {
+class HousesService {
   deleteHouse(id) {
     ProxyState.houses = ProxyState.houses.filter(house => house.id != id)
   }
@@ -15,4 +15,4 @@ class HouseService {
 
 }
 
-export const houseService = new HouseService()
+export const housesService = new HousesService()
