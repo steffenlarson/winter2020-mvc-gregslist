@@ -15,8 +15,9 @@ function _drawHouses() {
 
 export default class HousesController {
   constructor() {
+
     ProxyState.on("houses", _drawHouses)
-    _drawHouses
+    _drawHouses()
   }
 
   createHouse() {
